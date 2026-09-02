@@ -1,0 +1,28 @@
+# Unison
+
+> Unison provides innovative residential equity sharing agreements and home financing solutions, allowing homeowners to access cash without the burden of monthly payments or interest.
+
+## Core Products & Services
+- [Equity Sharing Agreement](https://www.unison.com/equity-sharing-agreement): Get up to $500k in cash with no monthly payments and no interest in exchange for a share of your home's future change in value.
+- [Equity Sharing Home Loan](https://www.unison.com/equity-sharing-home-loan): A home equity loan with low, interest-only monthly payments and a fixed, below-market rate.
+- [How it Works](https://www.unison.com/how-it-works): A step-by-step guide to the equity sharing process, from appraisal to the 30-year partnership term.
+- [Access Equity](https://www.unison.com/access-equity): Specific use cases for equity including debt consolidation, retirement funding, and home improvements.
+
+## Resources & Education
+- [Resource Center / Blog](https://www.unison.com/blog): Latest articles on homeownership, home equity, financial health, and renovations.
+- [FAQs](https://www.unison.com/faqs): Comprehensive answers regarding eligibility, pricing, and the buyout process.
+
+### Blog Topics
+- [Homeownership](https://www.unison.com/blog/topic/homeownership): Guides and insights for current and prospective homeowners on maintaining and maximizing property value.
+- [Home Equity](https://www.unison.com/blog/topic/home-equity): Educational content on understanding, calculating, and utilizing home equity effectively.
+- [Financial Health](https://www.unison.com/blog/topic/financial-health): Resources for debt management, credit improvement, and long-term financial planning.
+- [Renovations and Remodeling](https://www.unison.com/blog/topic/renovations-and-remodeling): Tips and project ideas for increasing home value through strategic improvements.
+
+## Company & Support
+- [About Us](https://www.unison.com/about-us): Mission to democratize the residential market and optimize homeownership.
+- [Contact Us](https://www.unison.com/contact): Direct channels for new applications, existing agreements, and partner opportunities.
+- [MyUnison Portal](https://www.unison.com/contact/agreement): Customer portal for existing agreement holders to manage their partnership.
+
+## Technical Metadata
+- [Sitemap Index](https://www.unison.com/sitemap.xml): Primary XML sitemap.
+- [Server Sitemap](https://www.unison.com/server-sitemap.xml): Dynamic and server-side generated content index.

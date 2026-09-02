@@ -1,7 +1,20 @@
 aid: unison
 name: Unison
-description: 'Unison is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Unison (Unison Home Ownership Investors, headquartered in San Francisco with a
+  second office in Omaha, and formerly FirstREX) is a residential home-equity investment manager that
+  pioneered the equity sharing agreement and institutionalized the Home Equity Investment
+  (HEI) asset class. Its consumer products are the Equity Sharing Agreement — up to
+  roughly $500,000 in cash with no monthly payments and no interest, in exchange for a
+  share of the home's future change in value over a 30-year term — and the Equity Sharing
+  Home Loan, a fixed below-market-rate, interest-only mortgage. Unison securitizes its
+  agreements and sells them to institutional investors, including a $300 million equity
+  sharing home loan purchase partnership with Carlyle. It reaches homeowners through
+  www.unison.com and services existing agreements through the MyUnison portal at
+  my.unison.com. Unison publishes no public developer program, no API reference, no SDKs
+  and no machine-readable contract of any kind; the only agent-facing artifact it serves
+  is an llms.txt at the site root.
+image: https://cdn.prod.website-files.com/688b907742517387194e886d/688bcf59a60dac663e6ab4c4_Unison%20symbol%20square%20brand.png
 url: https://raw.githubusercontent.com/api-evangelist/unison/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +25,13 @@ created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Financial Services
+- Fintech
+- Real Estate
+- Home Equity
+- Mortgage
+- Consumer Finance
+- Investment Management
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/unison-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.unison.com/
+- type: Blog
+  url: https://www.unison.com/blog
+- type: Support
+  url: https://www.unison.com/contact
+- type: HelpCenter
+  url: https://www.unison.com/faqs
+- type: TermsOfService
+  url: https://www.unison.com/legal/terms
+- type: PrivacyPolicy
+  url: https://www.unison.com/legal/privacy
+- type: GitHubOrganization
+  url: https://github.com/firstrex
+- type: LLMsTxt
+  url: llms/unison-llms.txt
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Unison is a consumer home-equity investment manager whose only software products are
+    the www.unison.com Webflow marketing site and the MyUnison agreement portal: its
+    308-URL sitemap contains no developer, API or docs page, /developers, /developer,
+    /api and /docs all 404, api.unison.com, developer.unison.com and docs.unison.com do
+    not resolve, the /partnership page is a business-development contact form with no
+    technical integration surface, and the company GitHub org (github.com/firstrex,
+    Unison's pre-rebrand name) holds only hiring mini-projects and forked style guides —
+    so there is no developer program to profile, only a provider-published llms.txt.
+  evidence:
+  - url: https://www.unison.com/llms.txt
+    status: 200
+  - url: https://www.unison.com/sitemap.xml
+    status: 200
+  - url: https://www.unison.com/developers
+    status: 404
+  - url: https://www.unison.com/api
+    status: 404
+  - url: https://www.unison.com/openapi.json
+    status: 404
+  - url: https://www.unison.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.unison.com/.well-known/agent.json
+    status: 404
+  - url: https://www.unison.com/.well-known/security.txt
+    status: 404
+  - url: https://www.unison.com/partnership
+    status: 200
+  - url: https://github.com/firstrex
+    status: 200
+  checked: '2026-09-02'

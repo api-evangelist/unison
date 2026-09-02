@@ -1,0 +1,176 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Direct HTTP probe of the named /.well-known/ path list on every Unison host that
+  resolves — www.unison.com (the Webflow marketing site), my.unison.com (the MyUnison
+  customer portal) and login.unison.com (the portal sign-in app).
+name: Unison well-known documents
+note: >-
+  NO well-known document is served. www.unison.com returns a genuine 404 with an
+  88-byte "Invalid .well-known request" body on every path. my.unison.com and
+  login.unison.com are single-page applications whose catch-all route answers HTTP 200
+  with the SAME app shell for EVERY path — 818 bytes on my., 2,992 bytes on login.,
+  byte-identical across all nine probes including nonsense-for-that-host paths like
+  /.well-known/ai-plugin.json. That is an SPA fallback, not a document, so both are
+  recorded as misses. Because nothing returned a real document, this file deliberately
+  carries NO `WellKnown` and NO `SecurityTxt` pointer in apis.yml — it is a record of
+  an absence, and pointing at it would assert a surface Unison does not serve.
+hosts:
+- host: www.unison.com
+  note: Marketing site (Webflow). Returns a real 404 body for every /.well-known/ path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: my.unison.com
+  note: >-
+    MyUnison customer portal SPA. Every path returns HTTP 200 with the identical
+    818-byte HTML app shell — a client-side catch-all, not a document. All entries
+    below are misses despite the 200.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+- host: login.unison.com
+  note: >-
+    Portal sign-in SPA, linked from the www.unison.com homepage. Same catch-all
+    behaviour — identical 2,992-byte HTML shell on every path, including
+    /.well-known/openid-configuration, so no OIDC discovery document is published even
+    though this is the identity host.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    file: null
+    result: miss
+    reason: spa-shell
+hosts_not_resolving:
+- host: api.unison.com
+  result: NXDOMAIN
+- host: developer.unison.com
+  result: NXDOMAIN
+- host: developers.unison.com
+  result: NXDOMAIN
+- host: docs.unison.com
+  result: NXDOMAIN
+- host: partners.unison.com
+  result: NXDOMAIN
+- host: app.unison.com
+  result: NXDOMAIN
+- host: portal.unison.com
+  result: NXDOMAIN
+- host: guide.unison.com
+  result: NXDOMAIN
+- host: www2.unison.com
+  result: NXDOMAIN
+summary:
+  hosts_probed: 3
+  paths_probed: 27
+  documents_served: 0
+  agent_card_found: false
+  security_txt_found: false
